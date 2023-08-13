@@ -16,101 +16,95 @@ body{
     background-size: cover;
     
 }
-.main{
+ .container{
   background-color:  rgba(0, 0, 0, 0.4);
-  width: 80%;
-  min-height: 60%;
+  width: 30%;
+  min-height: 90%;
   align-items: center;
   text-align: center;
-  margin: 10% auto 0 auto;
+  margin: 2% auto 0 auto;
  border-radius: 8px;
  color: white;
 }
-#myInput{
+
+input{
   width: 80%;
-  padding: 8px;
+  padding: 4px;
   border: none;
   outline: none;
   border-radius: 5px;
   font-size: medium;
-  font-weight: 800;
+  font-weight: 500;
   font-family: 'Roboto Condensed', sans-serif;
   color: black;
 }
-.addBtn{
-  width: 60px;
-  padding:8.8px;
+button{
+  width: auto;
+  padding:5px;
   border: none;
   border-radius: 5px;
   outline: none;
   text-align: center;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   background-color: white;
   color: black;
   cursor: pointer;
+  margin: 3px;
 }
-ul{
+
+.line{
+  color: white;
+  
+}
+h3{
+  font-size: 26px;
+}
+ul {
   margin: 0;
-    padding: 0;
+  padding: 0;
 }
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding-top: 10px;
-  list-style-type: none;
-  text-align: left;
-  font-size: 20px;
-  transition: 0.2s;
-  font-weight: 800;
-  color: white;
-  margin-left: 5%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+button:hover {
+  color: #333;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+/* Task list */
+li {
+  overflow: hidden;
+  padding: 6px 0;
+  /* border-bottom: 1px solid #eee; */
+  display: flex;
+  margin-left: 1px;
+}
+li > label {
+  font-size: 18px;
+  line-height: 40px;
+  width: 237px;
+  padding: 0 0 0 11px;
+}
+li > .delete:hover {
+  color: #CF2323;
 }
 
-ul li.checked {
-  color: #fff;
+/* Completed */
+#completed-tasks label {
   text-decoration: line-through;
-}
-
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
   color: white;
 }
-#footer{
-  text-align: center;
-  padding-top:2%;
-  color: #c64f47;
+
+/* Edit Task */
+ul li input[type=text] {
+  display:none;
+}
+ul li input[type=checkbox]{
+  width: 20px;
+}
+ul li.editMode input[type=text] {
+  display:block;
 }
 
-.addBtn:hover {
-  background-color: #9a9999;
+ul li.editMode label {
+  display:none;
 }
-  @media(min-width:900px){
-    .main{
-      width: 40%;
-    }
-  }
