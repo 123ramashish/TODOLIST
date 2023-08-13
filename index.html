@@ -10,18 +10,25 @@
     
 </head>
 <body>
-  <div class="main">
-  <div id="myDIV" class="header">
-    <h2 style="margin:5px">My To Do List</h2>
-    <input type="text" id="myInput" placeholder="Add your items...">
-    <span onclick="newElement()" class="addBtn">Add</span>
+  <div class="container">
+    <p>
+      <label for="new-task" style="text-align: center;font-size: 20px;color:white;">My TO DO List</label>
+      <br><input id="new-task" type="text"><button class="btn">Add</button>
+    </p>
+    <!-- <hr class="line"> -->
+    <h3>Todo</h3>
+    <ul id="incomplete-tasks">
+      <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+      
+      
+    </ul>
+    <hr class="line">
+    <h3>Completed</h3>
+    <ul id="completed-tasks">
+      <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+    </ul>
   </div>
-  
-  <ul id="myUL">
 
-  </ul>
-  </div>
-  
   <footer id="footer">Copywrite 2023 @R.A.R</footer>
     <script src="script.js"></script>
 </body>
